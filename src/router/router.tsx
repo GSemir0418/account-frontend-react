@@ -1,10 +1,10 @@
+import type { RouteObject } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
 import { HomePage } from '@/page/homePage'
-import { RouterPage } from '@/page/routerPage'
+import { ErrorPage } from '@/components/ErrorPage'
 
-const routes = [
-  { path: '/', element: <HomePage /> },
-  { path: '/router-page', element: <RouterPage /> },
+const routes: RouteObject[] = [
+  { path: '/', element: <HomePage />, errorElement: <ErrorPage /> },
 ]
 
 export const router = createBrowserRouter(routes)
