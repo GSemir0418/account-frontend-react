@@ -6,7 +6,7 @@ interface Props {}
 export const RedirectRoute: React.FC<Props> = () => {
   const nav = useNavigate()
   useEffect(() => {
-    nav('/')
+    nav('/welcome/1')
   }, [])
   return null
 }
