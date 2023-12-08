@@ -3,5 +3,5 @@ import { Outlet } from 'react-router-dom'
 
 interface Props {}
 export const MainLayout: React.FC<Props> = () => {
-  return <div><Outlet/></div>
+  return <div className=" flex items-center justify-center w-screen h-screen"><Outlet /></div>
 }

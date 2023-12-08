@@ -8,6 +8,7 @@ import { Welcome3 } from '@/page/welcomePage/Welcome3'
 import { Welcome4 } from '@/page/welcomePage/Welcome4'
 import { MainLayout } from '@/layouts/MainLayout'
 import { WelcomeLayout } from '@/layouts/WelcomeLayout'
+import { LoginPage } from '@/page/loginPage'
 
 const routes: RouteObject[] = [
   {
@@ -24,6 +25,10 @@ const routes: RouteObject[] = [
           { path: '3', element: <Welcome3 /> },
           { path: '4', element: <Welcome4 /> },
         ],
+      },
+      {
+        path: 'login',
+        element: <LoginPage />,
       },
     ],
   },
