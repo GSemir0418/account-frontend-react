@@ -57,6 +57,12 @@
   }))
   ```
 
+- vite 定义环境变量判断环境，axios 配置
+- define: { isDev: command === 'serve' }
+- define 定义的变量会被绑定到 window 作为全局变量，同时要告诉 ts 这个变量的类型
+- 定义类型 global.d.ts let isDev: boolean
+- axios 根据这个变量定义baseUrl axios.defaults.baseURL = isDev ? '/' : 'http://10.30.20.42/api/v1'
+
 Form 表单组件封装
 
 # useSWR 源码及原理
@@ -65,3 +71,5 @@ Form 表单组件封装
 - 安装 `pnpm add swr`
 
 zustand 源码及原理
+
+尽量不要将子路由都放到 / 下面，不利于 router 的匹配机制。比如要处理重定向跳转时，容易进入死循环

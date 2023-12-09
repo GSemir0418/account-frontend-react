@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 interface Props {}
-export const RedirectRoute: React.FC<Props> = () => {
+export const Root: React.FC<Props> = () => {
   const nav = useNavigate()
   useEffect(() => {
     nav('/welcome/1')
